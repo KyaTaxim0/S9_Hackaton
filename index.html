@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S9 - Hackaton</title>
+</head>
+<body>
+    <form action="">
+        <h1>Ejercicio 1 </h1>
+        <p>Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla</p>
+        <input id="ej1_num1" placeholder="Ingresar el 1er valor" type="number">
+        <input id="ej1_num2" placeholder="Ingresar el 2do valor" type="number">
+        <button type="button" onclick="operacion()">Sumar</button>
+        <p id="rpta1"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 2 </h1>
+        <p>Un estudiante realiza 4 exámenes, calcular el promedio de estos</p>
+        <p id="grade1"></p>
+        <p id="grade2"></p>
+        <p id="grade3"></p>
+        <p id="grade4"></p>
+        <button type="button" onclick="Avg()">Calcular Promedio</button>
+        <p id="rpta2"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 3,4,5 </h1>
+        <p>1.Calcular el área de un rectángulo</p>
+        <p>2.Calcular el área de un triángulo</p>
+        <p>3.Calcular el área de una circunferencia</p>
+        <select id="op_area" name="area">
+            <option value="rec">Rectangulo</option>
+            <option value="tri">Triangulo</option>
+            <option value="cir">Circunferencia</option>
+        </select>
+        <p>Ingresar datos:</p>
+        <input id="ej3_base" placeholder="Base" type="number">
+        <input id="ej4_altura" placeholder="Altura" type="number">
+        <input id="ej5_radio" placeholder="Radio" type="number">
+        <button type="button" onclick="areas()">Calcular el Area</button>
+        <p id="rpta3"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 6 </h1>
+        <p>Determinar el sueldo semanal de un trabajador basándose en sus horas trabajadas y su salario de hora hombre </p>
+        <p>Selecciona el dia:</p>
+        <select id="op_day" name="day">
+            <option value="lun">Lunes</option>
+            <option value="mar">Martes</option>
+            <option value="mie">Miercoles</option>
+            <option value="jue">Jueves</option>
+            <option value="vie">Viernes</option>
+            <option value="sab">Sabado</option>
+            <option value="dom">Domingo</option>
+        </select>
+        <p>Ingresa los datos del dia seleccionado:</p>
+        <input id="ej6_hrs" placeholder="Hrs." type="number">
+        <input id="ej6_sal" placeholder="S/. por hr" type="number">
+        <button type="button" onclick="addDayData()">Ingresar</button>
+        <button type="button" onclick="sueldoS()">Calcular Sueldo</button>
+        <p id="rpta6"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 7 </h1>
+        <p>Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero. Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, determinando cuantas pulgadas debe pedir con base en los metros que requiere. Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m). </p>
+        <p>Ingresa las pulgadas:</p>
+        <input id="ej7_plg" placeholder="Pulgadas ''" type="number">
+        <button type="button" onclick="addInch()">Ingresar medida</button>
+        <button type="button" onclick="viewMeters()">Mostrar conversion</button>
+        <p id="rpta7"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 8 </h1>
+        <p>Una empresa importadora desea determinar cuántos dólares puede adquirir con "x"" cantidad de dinero peruano </p>
+        <p>Ingresa monto S/.:</p>
+        <input id="ej8_sol" placeholder="S/." type="number">
+        <button type="button" onclick="addSol()">Ingresar cantidad</button>
+        <button type="button" onclick="viewDollars()">Mostrar conversion</button>
+        <p id="rpta8"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 9 </h1>
+        <p>Una empresa que contrata personal requiere determinar la edad de las personas que solicitan trabajo, pero cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron </p>
+        <p>Ingresa datos del personal:</p>
+        <input id="ej9_pers" placeholder="Nombres y Apellidos" type="text">
+        <input id="ej9_bday" placeholder="Fecha de Nacimiento" type="date">
+        <button type="button" onclick="addPersonal()">Ingresar Personal</button>
+        <button type="button" onclick="viewInfo()">Detalle de Personal</button>
+        <p id="rpta9"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 10 </h1>
+        <p>Se tiene el nombre y la edad de tres personas. Se desea saber el nombre y la edad de la persona de menor edad</p>
+        <p>Ingresa datos de la persona:</p>
+        <input id="ej10_per" placeholder="Nombres y Apellidos" type="text">
+        <input id="ej10_age" placeholder="Edad" type="number">
+        <button type="button" onclick="addPerson()">Ingresar Persona</button>
+        <button type="button" onclick="viewDetail()">Calcular el menor</button>
+        <p id="rpta10"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 11 </h1>
+        <p>Se les dará un bono por antigüedad a los empleados de una tienda. 
+            Si tienen un año, se les dará $100; si tienen 2 años, $200, y así 
+            sucesivamente hasta los 5 años. Para los que tengan más de 5, el 
+            bono será de $1000. Realice un algoritmo y represéntelo ,que 
+            permita determinar el bono que recibirá un trabajador</p>
+        <p>Ingresa detalles de empleados:</p>
+        <input id="ej11_pers" placeholder="Nombres y Apellidos" type="text">
+        <input id="ej11_inid" placeholder="Fecha de inicio" type="date">
+        <button type="button" onclick="addEmployee()">Ingresar Persona</button>
+        <button type="button" onclick="viewBonusDetail()">Calcular los Bonus</button>
+        <p id="rpta11"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 12 </h1>
+        <p>Un profesor tiene un salario inicial de $1500, y recibe un 
+            incremento de 10 % anual durante 6 años. ¿Cuál es su salario al 
+            cabo de 6 años? ¿Qué salario ha recibido en cada uno de los 6 años? 
+            Realice el algoritmo y representan la solución, utilizando el ciclo apropiado</p>
+        <p>Ingresa el numero de anios a calcular:</p>
+        <input id="ej12_year" placeholder="Anios" type="number">
+        <button type="button" onclick="viewSalaryDetail()">Calcular Salario</button>
+        <p id="rpta12"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 13 </h1>
+        <p>Realice un algoritmo para leer las calificaciones de N alumnos y 
+            determine el número de aprobados y reprobados</p>
+        <input id="ej13_name" placeholder="Nombres y Apellidos" type="text">
+        <input id="ej13_grade" placeholder="Nota" type="number">
+        <button type="button" onclick="addStudent()">Ingresar Alumno</button>
+        <button type="button" onclick="viewStudentsList()">Verificar aprobados</button>
+        <p id="rpta13"></p>
+        <br>
+        <hr>
+        <h1>Ejercicio 14 </h1>
+        <p>Una compañía, fabrica focos de colores (verdes, blancos y rojos). 
+            Se desea contabilizar, de un lote de N focos, el número de focos de 
+            cada color que hay en existencia</p>
+        <p>Por cada click se ingresara un foco de acuerdo al color indicado</p>
+        <button id="green" type="button" >Verde: 0</button>
+        <button id="white" type="button" >Blanco: 0</button>
+        <button id="red" type="button" >Rojo: 0</button>
+        <p id="rpta14">Total de Focos: 0</p>
+        <br>
+        <hr>
+        <h1>Ejercicio 15 </h1>
+        <p>Realice un algoritmo para determinar si una persona puede votar 
+            con base en su edad en las próximas elecciones</p>
+        <p>Ingresa tu fecha de nacimiento:</p>
+        <input id="ej15_bday" placeholder="Fecha de Nacimiento" type="date">
+        <button type="button" onclick="verifyAge()">Verificar participacion</button>
+        <p id="rpta15"></p>
+        <br>
+    </form>
+    <script src="./main.js"></script>
+</body>
+</html>
